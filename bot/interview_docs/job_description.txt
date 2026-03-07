@@ -1,0 +1,10 @@
+  Programming Languages: JavaScript (ES6+), TypeScript, C++, Python
+  Frontend Development: Angular, React.js, Redux, Redux Toolkit, HTML5, CSS3, Responsive Web
+Design, PrimeNG, Tailwind CSS, Bootstrap, Ant Design, WebSocket Integration, UI Component
+Development, Cross-Browser Compatibility, REST API Integration
+  Backend Development: Node.js, Express.js, RESTful API Development, Authentication Integration
+  Database Management: MongoDB, MySQL
+  Version Control & DevOps: Git, GitHub, Bitbucket, CI/CD Fundamentals
+  Tools & Platforms: Postman, JIRA, Figma, Visual Studio Code, Claude (AI-Assisted Development)
+  Software Development Concepts: Object-Oriented Programming (OOP), Agile & Scrum
+Methodologies, SDLC, Debugging, Performance Optimization, Technical Documentation

@@ -1,0 +1,46 @@
+ 
+crash_debug_20260307_114243.l
+og:13802:RuntimeError: 
+expected scalar type Double 
+but found Float
+crash_debug_20260307_114243.l
+og:13805:[VAD] Error 
+processing chunk: The 
+following operation failed 
+in the TorchScript 
+interpreter.
+crash_debug_20260307_114243.l
+og:13806:Traceback of 
+TorchScript, serialized code 
+(most recent call last):
+crash_debug_20260307_114243.l
+og:13841:Traceback of 
+TorchScript, original code 
+(most recent call last):
+crash_debug_20260307_114243.l
+og:13871:RuntimeError: 
+expected scalar type Double 
+but found Float
+crash_debug_20260307_114243.l
+og:13874:[VAD] Error 
+processing chunk: The 
+following operation failed 
+in the TorchScript 
+interpreter.
+crash_debug_20260307_114243.l
+og:13875:Traceback of 
+TorchScript, serialized code 
+(most recent call last):
+crash_debug_20260307_114243.l
+og:13910:Traceback of 
+TorchScript, original code 
+(most recent call last):
+crash_debug_20260307_114243.l
+og:13940:RuntimeError: 
+expected scalar type Double 
+but found Float
+crash_debug_20260307_114243.l
+og:14165:Exceptions handled: 
+0
+
+

@@ -1,0 +1,100 @@
+ 
+================================================================================
+ACTIVE THREADS:
+================================================================================
+  - MainThread (daemon=False, alive=True)
+  - crash-monitor (daemon=True, alive=True)
+  - watchdog (daemon=True, alive=True)
+  - Thread-1 (update) (daemon=True, alive=True)
+  - tray (daemon=True, alive=True)
+  - pipeline (daemon=True, alive=True)
+  - overlay (daemon=False, alive=True)
+  - enterprise-monitor (daemon=True, alive=True)
+  - ThreadPoolExecutor-0_0 (daemon=True, alive=True)
+  - whisper-final (daemon=True, alive=True)
+  - llm-worker (daemon=True, alive=True)
+  - stream-watchdog (daemon=True, alive=True)
+  - vad-loop (daemon=True, alive=True)
+================================================================================
+
+
+================================================================================
+ACTIVE THREADS:
+================================================================================
+  - MainThread (daemon=False, alive=True)
+  - crash-monitor (daemon=True, alive=True)
+  - watchdog (daemon=True, alive=True)
+  - Thread-1 (update) (daemon=True, alive=True)
+  - tray (daemon=True, alive=True)
+  - pipeline (daemon=True, alive=True)
+  - overlay (daemon=False, alive=True)
+  - enterprise-monitor (daemon=True, alive=True)
+  - ThreadPoolExecutor-0_0 (daemon=True, alive=True)
+  - whisper-final (daemon=True, alive=True)
+  - llm-worker (daemon=True, alive=True)
+  - stream-watchdog (daemon=True, alive=True)
+  - vad-loop (daemon=True, alive=True)
+================================================================================
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+WATCHDOG: Main thread appears frozen!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+No activity for 352 seconds
+
+================================================================================
+ACTIVE THREADS:
+================================================================================
+  - MainThread (daemon=False, alive=True)
+  - crash-monitor (daemon=True, alive=True)
+  - watchdog (daemon=True, alive=True)
+  - Thread-1 (update) (daemon=True, alive=True)
+  - tray (daemon=True, alive=True)
+  - pipeline (daemon=True, alive=True)
+  - overlay (daemon=False, alive=True)
+  - enterprise-monitor (daemon=True, alive=True)
+  - ThreadPoolExecutor-0_0 (daemon=True, alive=True)
+  - whisper-final (daemon=True, alive=True)
+  - llm-worker (daemon=True, alive=True)
+  - stream-watchdog (daemon=True, alive=True)
+  - vad-loop (daemon=True, alive=True)
+================================================================================
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+================================================================================
+ACTIVE THREADS:
+================================================================================
+  - MainThread (daemon=False, alive=True)
+  - crash-monitor (daemon=True, alive=True)
+  - watchdog (daemon=True, alive=True)
+  - Thread-1 (update) (daemon=True, alive=True)
+  - tray (daemon=True, alive=True)
+  - pipeline (daemon=True, alive=True)
+  - overlay (daemon=False, alive=True)
+  - enterprise-monitor (daemon=True, alive=True)
+  - ThreadPoolExecutor-0_0 (daemon=True, alive=True)
+  - whisper-final (daemon=True, alive=True)
+  - llm-worker (daemon=True, alive=True)
+  - stream-watchdog (daemon=True, alive=True)
+  - vad-loop (daemon=True, alive=True)
+================================================================================
+
+
+================================================================================
+CRASH DETECTOR SHUTTING DOWN
+================================================================================
+Check log file: crash_debug_20260307_114243.log
+================================================================================
+
+
+============================================================
+SESSION SUMMARY
+============================================================
+Session duration: 383.4s (6.4 minutes)
+Exceptions handled: 0
+Status: CLEAN EXIT
+============================================================
+
+[crash_prevention] Cleanup on exit

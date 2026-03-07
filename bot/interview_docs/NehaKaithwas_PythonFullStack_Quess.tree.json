@@ -1,0 +1,37 @@
+{
+  "doc_name": "NehaKaithwas_PythonFullStack_Quess.pdf",
+  "structure": [
+    {
+      "title": "Neha Kaithwas Email: Kaithwasneha720@gmail.com",
+      "start_index": 1,
+      "end_index": 100,
+      "node_id": "0000",
+      "nodes": [
+        {
+          "title": "Skills",
+          "start_index": 6,
+          "end_index": 31,
+          "node_id": "0001"
+        },
+        {
+          "title": "Experience",
+          "start_index": 32,
+          "end_index": 72,
+          "node_id": "0002"
+        },
+        {
+          "title": "Education",
+          "start_index": 73,
+          "end_index": 85,
+          "node_id": "0003"
+        },
+        {
+          "title": "Certifications",
+          "start_index": 86,
+          "end_index": 100,
+          "node_id": "0004"
+        }
+      ]
+    }
+  ]
+}

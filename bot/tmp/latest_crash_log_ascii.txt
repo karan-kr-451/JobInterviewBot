@@ -1,0 +1,200 @@
+  - Thread-1 (update) (daemon=True, alive=True)
+  - tray (daemon=True, alive=True)
+  - pipeline (daemon=True, alive=True)
+  - overlay (daemon=False, alive=True)
+  - enterprise-monitor (daemon=True, alive=True)
+  - ThreadPoolExecutor-0_0 (daemon=True, alive=True)
+  - whisper-final (daemon=True, alive=True)
+  - llm-worker (daemon=True, alive=True)
+  - stream-watchdog (daemon=True, alive=True)
+  - vad-loop (daemon=True, alive=True)
+================================================================================
+
+
+================================================================================
+ACTIVE THREADS:
+================================================================================
+  - MainThread (daemon=False, alive=True)
+  - crash-monitor (daemon=True, alive=True)
+  - watchdog (daemon=True, alive=True)
+  - Thread-1 (update) (daemon=True, alive=True)
+  - tray (daemon=True, alive=True)
+  - pipeline (daemon=True, alive=True)
+  - overlay (daemon=False, alive=True)
+  - enterprise-monitor (daemon=True, alive=True)
+  - ThreadPoolExecutor-0_0 (daemon=True, alive=True)
+  - whisper-final (daemon=True, alive=True)
+  - llm-worker (daemon=True, alive=True)
+  - stream-watchdog (daemon=True, alive=True)
+  - vad-loop (daemon=True, alive=True)
+================================================================================
+
+
+???? Recording
+??? Silence 1/10f [1.2s]  
+??? Silence 1/10f [1.6s]  
+??? Silence 2/10f [1.7s]  
+??? Silence 3/10f [1.8s]  
+??? Silence 4/10f [1.9s]  
+??? Silence 5/10f [2.0s]  
+??? Silence 6/10f [2.1s]  
+??? Silence 7/10f [2.2s]  
+??? Silence 8/10f [2.3s]  
+??? Silence 9/10f [2.4s]  
+??? Silence 10/10f [2.5s]  
+??? Utterance done ??? 2.5s
+[Groq Whisper 380ms] hallucination on whisper-large-v3-turbo: '.'
+  Skipped (<3 words): ''
+
+================================================================================
+ACTIVE THREADS:
+================================================================================
+  - MainThread (daemon=False, alive=True)
+  - crash-monitor (daemon=True, alive=True)
+  - watchdog (daemon=True, alive=True)
+  - Thread-1 (update) (daemon=True, alive=True)
+  - tray (daemon=True, alive=True)
+  - pipeline (daemon=True, alive=True)
+  - overlay (daemon=False, alive=True)
+  - enterprise-monitor (daemon=True, alive=True)
+  - ThreadPoolExecutor-0_0 (daemon=True, alive=True)
+  - whisper-final (daemon=True, alive=True)
+  - llm-worker (daemon=True, alive=True)
+  - stream-watchdog (daemon=True, alive=True)
+  - vad-loop (daemon=True, alive=True)
+================================================================================
+
+
+???? Recording
+??? Silence 1/10f [0.5s]  
+??? Silence 1/10f [1.0s]  
+??? Silence 2/10f [1.1s]  
+??? Silence 3/10f [1.2s]  
+??? Silence 1/10f [1.7s]  
+??? Silence 2/10f [1.8s]  
+??? Silence 3/10f [1.9s]  
+================================================================================
+ACTIVE THREADS:
+================================================================================
+  - MainThread (daemon=False, alive=True)
+  - crash-monitor (daemon=True, alive=True)
+  - watchdog (daemon=True, alive=True)
+  - Thread-1 (update) (daemon=True, alive=True)
+  - tray (daemon=True, alive=True)
+  - pipeline (daemon=True, alive=True)
+  - overlay (daemon=False, alive=True)
+  - enterprise-monitor (daemon=True, alive=True)
+  - ThreadPoolExecutor-0_0 (daemon=True, alive=True)
+  - whisper-final (daemon=True, alive=True)
+  - llm-worker (daemon=True, alive=True)
+  - stream-watchdog (daemon=True, alive=True)
+  - vad-loop (daemon=True, alive=True)
+================================================================================
+
+
+??? Silence 1/10f [2.4s]  
+??? Silence 2/10f [2.5s]  
+??? Silence 3/10f [2.6s]  
+??? Silence 4/10f [2.7s]  
+??? Silence 5/10f [2.8s]  
+??? Silence 6/10f [2.9s]  
+??? Silence 7/10f [3.0s]  
+??? Silence 8/10f [3.1s]  
+??? Silence 9/10f [3.2s]  
+??? Silence 10/10f [3.3s]  
+??? Utterance done ??? 3.3s
+Windows fatal exception: access violation
+
+Thread 0x0000600c (most recent call first):
+  <no Python frame>
+
+Thread 0x00006364 (most recent call first):
+  File "D:\InterviewBot\bot\audio\vad.py", line 172 in transcribe_loop
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000010ec (most recent call first):
+  File "D:\InterviewBot\bot\audio\watchdog.py", line 25 in watchdog
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x0000648c (most recent call first):
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 359 in wait
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\queue.py", line 180 in get
+  File "D:\InterviewBot\bot\llm\worker.py", line 28 in _worker_body
+  File "D:\InterviewBot\bot\llm\worker.py", line 94 in _worker
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Current thread 0x00002a5c (most recent call first):
+  File "D:\InterviewBot\bot\.venv\Lib\site-packages\requests\sessions.py", line 703 in send
+  File "D:\InterviewBot\bot\.venv\Lib\site-packages\requests\sessions.py", line 589 in request
+  File "D:\InterviewBot\bot\.venv\Lib\site-packages\requests\sessions.py", line 637 in post
+  File "D:\InterviewBot\bot\transcription\groq_whisper.py", line 131 in transcribe_groq
+  File "D:\InterviewBot\bot\transcription\worker.py", line 74 in _final_worker
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003c40 (most recent call first):
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\concurrent\futures\thread.py", line 90 in _worker
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000060ac (most recent call first):
+  File "D:\InterviewBot\bot\core\enterprise_crash_prevention.py", line 362 in _monitoring_thread
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x000044e8 (most recent call first):
+  File "D:\InterviewBot\bot\overlay.py", line 629 in _run_inner
+  File "D:\InterviewBot\bot\overlay.py", line 498 in _run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003238 (most recent call first):
+  File "D:\InterviewBot\bot\audio\capture.py", line 194 in run_stream_with_restart
+  File "D:\InterviewBot\bot\main_gui.py", line 288 in run_pipeline
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003ed8 (most recent call first):
+  File "D:\InterviewBot\bot\.venv\Lib\site-packages\pystray\_win32.py", line 147 in _mainloop
+  File "D:\InterviewBot\bot\.venv\Lib\site-packages\pystray\_win32.py", line 128 in _run
+  File "D:\InterviewBot\bot\.venv\Lib\site-packages\pystray\_base.py", line 212 in run
+  File "D:\InterviewBot\bot\setup_ui.py", line 998 in _run_tray
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00001bf0 (most recent call first):
+  File "D:\InterviewBot\bot\ui\main_window.py", line 863 in update
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00003600 (most recent call first):
+  File "D:\InterviewBot\bot\crash_detector.py", line 193 in watchdog
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00002090 (most recent call first):
+  File "D:\InterviewBot\bot\crash_detector.py", line 81 in thread_monitor
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1012 in run
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1075 in _bootstrap_inner
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\threading.py", line 1032 in _bootstrap
+
+Thread 0x00002964 (most recent call first):
+  File "C:\Users\karan\AppData\Roaming\uv\python\cpython-3.12.12-windows-x86_64-none\Lib\tkinter\__init__.py", line 1505 in mainloop
+  File "D:\InterviewBot\bot\ui\main_window.py", line 1235 in run
+  File "D:\InterviewBot\bot\main_gui.py", line 80 in start
+  File "D:\InterviewBot\bot\main_gui.py", line 355 in main
+  File "D:\InterviewBot\bot\crash_detector.py", line 234 in <module>

@@ -1,0 +1,39 @@
+# Audio Processing - Latest stable versions
+sounddevice>=0.5.1
+numpy>=1.26.0
+
+# Speech Recognition - Latest versions
+faster-whisper>=1.1.0
+torch>=2.5.0
+torchaudio>=2.5.0
+
+# Voice Activity Detection
+# silero-vad loaded via torch.hub - no separate install needed
+
+# Speaker Diarization (optional) - Latest version
+pyannote.audio>=3.3.0
+
+# Google Gemini API - Latest version
+google-generativeai>=0.8.3
+
+# Telegram Bot Integration
+requests>=2.32.0
+
+# Additional dependencies that might be needed
+scipy>=1.13.0
+librosa>=0.10.0
+
+# Optional: For better audio handling
+soundfile>=0.12.1
+
+# Document Parsing & RAG
+pypdf>=5.1.0
+pageindex-open==0.1.1
+
+# Build and GUI
+pyinstaller
+pystray
+pillow
+
+# Configuration
+pyyaml>=6.0
