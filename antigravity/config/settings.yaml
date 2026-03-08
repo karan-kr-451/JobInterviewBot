@@ -1,0 +1,99 @@
+# Interview Assistant - Application Settings
+# All values here can be overridden by environment variables.
+
+llm:
+  # Backend selection: "auto" | "groq" | "gemini" | "ollama"
+  backend: auto
+  groq:
+    models:
+      CODING:         llama-3.3-70b-versatile
+      SYSTEM_DESIGN:  llama-3.3-70b-versatile
+      CONCEPT:        llama-3.1-8b-instant
+      BEHAVIORAL:     llama-3.1-8b-instant
+      PROJECT:        llama-3.1-8b-instant
+      UNKNOWN:        llama-3.1-8b-instant
+    fallback_model:   llama-3.1-8b-instant
+    temperature:      0.3
+    enterprise_models:
+      - llama-3.3-70b-versatile
+      - llama-3.1-8b-instant
+  gemini:
+    model:            gemini-2.0-flash
+    fallbacks:
+      - gemini-2.5-flash-preview-04-17
+      - gemini-1.5-flash
+    generation_configs:
+      CODING:
+        temperature:       0.3
+        top_p:             0.9
+        max_output_tokens: 600
+      SYSTEM_DESIGN:
+        temperature:       0.4
+        top_p:             0.9
+        max_output_tokens: 700
+      CONCEPT:
+        temperature:       0.3
+        top_p:             0.9
+        max_output_tokens: 300
+      BEHAVIORAL:
+        temperature:       0.5
+        top_p:             0.9
+        max_output_tokens: 300
+      PROJECT:
+        temperature:       0.4
+        top_p:             0.9
+        max_output_tokens: 400
+      UNKNOWN:
+        temperature:       0.4
+        top_p:             0.9
+        max_output_tokens: 300
+  ollama:
+    base_url: http://localhost:11434
+    model:    llama3.2
+
+audio:
+  # Set to device index shown at startup. null = system default.
+  device_index: null
+  sample_rate:       16000
+  chunk_duration:    0.1      # seconds per audio callback
+  queue_maxsize:     500      # audio deque max length
+  vad_threshold:     0.5      # Silero VAD confidence threshold
+  rms_gate:          0.005    # RMS silence gate
+  speech_onset_frames: 3      # frames to confirm speech start
+  fast_silence_frames: 18     # frames of silence to end utterance
+  min_speech_duration: 0.4    # seconds
+  max_speech_duration: 30.0   # seconds
+
+transcription:
+  # Groq Whisper is used if GROQ_API_KEY is set (cloud, fast).
+  # Falls back to local faster-whisper otherwise.
+  local_model:       base.en
+  compute_type:      int8
+  min_words:         3
+  final_queue_size:  10
+  llm_queue_size:    20
+
+rag:
+  docs_folder: interview_docs
+  top_k:       2
+
+telegram:
+  queue_size:    50
+  send_timeout:  3    # seconds
+
+overlay:
+  width:     900
+  height:    620
+  x:         80
+  y:         80
+  alpha:     230      # 0-255 window transparency
+  font:      Consolas
+  font_size: 11
+
+logging:
+  log_file:   logs/interview_log.txt
+  crash_file: logs/crash_debug.log
+
+job:
+  title:       ""
+  description: ""

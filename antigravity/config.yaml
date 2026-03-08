@@ -1,0 +1,45 @@
+app:
+  name: "Interview Assistant"
+  version: "4.0"
+  window_title: "Antigravity Interview Assistant"
+
+audio:
+  device_index: null       # override with DEVICE_INDEX env var
+  sample_rate: 16000
+  channels: 1
+  chunk_seconds: 0.5
+  vad_threshold: 0.005     # amplitude gate before VAD model
+
+transcription:
+  backend: "groq"          # groq | local
+  local_model: "tiny.en"   # faster-whisper model size
+  language: "en"
+
+llm:
+  backend: "auto"          # auto | groq | gemini | ollama
+  groq_model: "llama-3.3-70b-versatile"
+  gemini_model: "gemini-2.0-flash"
+  ollama_model: "llama3.1"
+  max_tokens: 1024
+  temperature: 0.3
+  system_prompt: |
+    You are an expert technical interview assistant.
+    Answer concisely and accurately. Focus on the most
+    important technical points. Be direct and helpful.
+
+overlay:
+  enabled: true
+  opacity: 0.85
+  position: "top-right"    # top-right | top-left | bottom-right | bottom-left
+  font_size: 14
+  max_lines: 20
+
+notifications:
+  telegram_enabled: false
+
+watchdog:
+  check_interval_seconds: 10
+  stale_threshold_seconds: 30
+
+gc:
+  manual_collect_interval_seconds: 60

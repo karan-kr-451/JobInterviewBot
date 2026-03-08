@@ -1,0 +1,42 @@
+# ── Core ──────────────────────────────────────────────
+numpy
+scipy
+
+# ── Audio ─────────────────────────────────────────────
+sounddevice
+soundfile
+librosa
+
+# ── Machine Learning ──────────────────────────────────
+# Install CPU builds to avoid CUDA DLL conflicts:
+# pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+torch
+torchaudio
+ctranslate2
+faster-whisper
+
+# ── LLM Clients ───────────────────────────────────────
+groq
+google-generativeai
+ollama
+
+# ── GUI ───────────────────────────────────────────────
+PyQt6
+pystray
+pillow
+
+# ── HTTP & Config ─────────────────────────────────────
+requests
+python-dotenv
+pyyaml
+
+# ── RAG / Documents ───────────────────────────────────
+pypdf
+chromadb
+
+# ── Utilities ─────────────────────────────────────────
+cachetools
+packaging
+
+# ── Build ─────────────────────────────────────────────
+pyinstaller

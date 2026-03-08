@@ -1,0 +1,12 @@
+Place your documents here before launching:
+
+  resume_yourname.pdf       → Resume / CV (enables RAG + persona)
+  job_description.txt       → Job description text (for context)
+  projects.pdf              → Project details, portfolio (optional)
+
+Supported formats: .pdf  .txt  .md
+
+Files are categorised by name:
+  *resume*, *cv*            → Resume context
+  *job*, *jd*, *desc*       → Job description
+  Everything else           → Project context
