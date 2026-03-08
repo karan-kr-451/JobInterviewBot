@@ -8,6 +8,8 @@ ALL state updates via Qt signals via SignalBridge to guarantee thread safety.
 from __future__ import annotations
 
 import logging
+import sys
+import ctypes
 
 from PyQt6.QtCore import pyqtSignal, QObject, QTimer, Qt
 from PyQt6.QtGui import QFont, QTextCursor
@@ -66,6 +68,8 @@ class MainWindow(QMainWindow):
         
         self._setup_ui()
         self._connect_signals()
+        # Delay ensuring window is fully mapped/visible to OS
+        QTimer.singleShot(1000, self._exclude_from_capture)
         
         # We start looking for updates
         self.status_label.setText("Status: Initializing modules...")
@@ -235,6 +239,28 @@ class MainWindow(QMainWindow):
             self.txt_response.append(f"<i>Uploaded {count} file(s) successfully! RAG context updating...</i>")
             # Notify RAG system to reload
             bus.publish(EVT_DOCUMENTS_UPDATED)
+
+    def _exclude_from_capture(self) -> None:
+        """Exclude window from screen capture (Windows only)."""
+        if sys.platform != "win32":
+            return
+        try:
+            hwnd = int(self.winId())
+            if hwnd:
+                # GA_ROOT = 3
+                hwnd = ctypes.windll.user32.GetAncestor(hwnd, 3)
+                
+                # Try WDA_EXCLUDEFROMCAPTURE (0x11), fallback to WDA_MONITOR (0x01)
+                result = ctypes.windll.user32.SetWindowDisplayAffinity(hwnd, 0x11)
+                if not result:
+                    result = ctypes.windll.user32.SetWindowDisplayAffinity(hwnd, 0x01)
+                
+                if result:
+                    logger.info("[GUI] Window excluded from screen capture.")
+                else:
+                    logger.warning("[GUI] SetWindowDisplayAffinity failed.")
+        except Exception as exc:
+            logger.warning("[GUI] Could not exclude from capture: %s", exc)
         
     def closeEvent(self, event) -> None:
         # Hide instead of close to keep tray active

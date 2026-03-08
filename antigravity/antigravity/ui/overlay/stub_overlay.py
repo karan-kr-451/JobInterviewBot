@@ -33,3 +33,7 @@ class StubOverlay(QObject):
     
     def close(self):
         pass
+
+    def _exclude_from_capture(self):
+        """Stub for interface consistency."""
+        pass

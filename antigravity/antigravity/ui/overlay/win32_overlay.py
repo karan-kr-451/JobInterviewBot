@@ -211,19 +211,31 @@ class Win32Overlay(QWidget):
         self.text_updated.connect(self._on_text_updated)
         self.classification_updated.connect(self._on_classification_updated)
         QTimer.singleShot(100, self._apply_positioning)
-        QTimer.singleShot(500, self._apply_stealth_affinity)
+        QTimer.singleShot(500, self._exclude_from_capture)
 
     # ------------------------------------------------------------------
     # Stealth — excluded from Zoom / Teams screen capture
     # ------------------------------------------------------------------
-    def _apply_stealth_affinity(self) -> None:
+    def _exclude_from_capture(self) -> None:
+        """Exclude window from screen capture (Windows only)."""
         try:
-            hwnd = self.winId()
-            if isinstance(hwnd, (int, ctypes.c_void_p)):
-                ctypes.windll.user32.SetWindowDisplayAffinity(int(hwnd), 0x00000011)
-                logger.info("[OVERLAY] Stealth affinity applied.")
+            hwnd = int(self.winId())
+            if hwnd:
+                # GA_ROOT = 3 (ensure we have the actual top-level window handle)
+                hwnd = ctypes.windll.user32.GetAncestor(hwnd, 3)
+                
+                # Flag 0x11 = WDA_EXCLUDEFROMCAPTURE (Win10 2004+)
+                # Flag 0x01 = WDA_MONITOR (older Win10, blacks it out)
+                result = ctypes.windll.user32.SetWindowDisplayAffinity(hwnd, 0x11)
+                if not result:
+                    result = ctypes.windll.user32.SetWindowDisplayAffinity(hwnd, 0x01)
+                
+                if result:
+                    logger.info("[OVERLAY] Window excluded from screen capture.")
+                else:
+                    logger.warning("[OVERLAY] SetWindowDisplayAffinity failed.")
         except Exception as exc:
-            logger.warning("[OVERLAY] Stealth affinity failed: %s", exc)
+            logger.warning("[OVERLAY] Could not exclude from capture: %s", exc)
 
     # ------------------------------------------------------------------
     # UI construction
